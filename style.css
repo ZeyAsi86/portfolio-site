@@ -38,10 +38,12 @@ a {
     margin: 0;
 }
 
-.subtitle {
-    font-size: 0.95rem;
-    color: #666;
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 0.75rem;
+    }
 }
+
 
 /* Sağ taraf: linkler ve butonlar */
 .header-right {
