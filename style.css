@@ -1,0 +1,291 @@
+﻿/* =====================
+   GLOBAL
+===================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    animation: fadeIn 0.8s ease-in;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================
+   HEADER
+===================== */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.header-left h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Sağ taraf: linkler ve butonlar */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+    .header-right a {
+        margin-right: 15px;
+        color: #764ba2;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+        .header-right a i {
+            margin-right: 6px;
+        }
+
+        .header-right a:hover {
+            color: #0e76a8; /* LinkedIn mavisi hover */
+        }
+
+    /* Sağdaki dil butonları */
+    .header-right button {
+        margin-left: 5px;
+        padding: 4px 12px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background: #f0f0f0;
+    }
+
+        .header-right button:hover {
+            background: #764ba2;
+            color: white;
+            transition: 0.3s;
+        }
+/* =====================
+   BUTTON
+===================== */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    border-radius: 24px;
+    background: #764ba2;
+    color: white;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+    .btn:hover {
+        background: #5e3b91;
+    }
+
+/* =====================
+   ABOUT
+===================== */
+#about {
+    background: white;
+    padding: 60px 25px;
+    max-width: 900px;
+    margin: 60px auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+    #about h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #764ba2;
+    }
+
+    #about p {
+        line-height: 1.8;
+        font-size: 1.05rem;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+/* =====================
+   PROJECTS
+===================== */
+#projects {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+    #projects h2 {
+        text-align: center;
+        margin-bottom: 45px;
+        font-size: 1.8rem;
+    }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+    }
+
+    .project-card h3 {
+        margin-bottom: 12px;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+.tech {
+    margin: 15px 0;
+    font-size: 0.85rem;
+    color: #764ba2;
+}
+
+/* =====================
+   PROJECT DETAIL PAGE
+===================== */
+.project-detail {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+    .project-detail h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .project-detail h2 {
+        margin-top: 35px;
+        margin-bottom: 12px;
+        color: #764ba2;
+    }
+
+    .project-detail p {
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+.project-image {
+    width: 100%;
+    border-radius: 18px;
+    margin: 30px 0;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+    color: white;
+}
+
+    footer a {
+        color: #a29bfe;
+        font-weight: bold;
+    }
+
+/* =====================
+   PAGE TRANSITION
+===================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =====================
+   SCROLL ANIMATION
+===================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+/* Header linkleri ve ikonlar */
+.header-right a i {
+    margin-right: 6px; /* ikon ile yazı arası boşluk */
+}
+
+.header-right a {
+    color: #764ba2;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+    .header-right a:hover {
+        color: #0e76a8; /* LinkedIn mavisine yakın renk */
+    }
+
+/* HERO BÖLÜMÜ */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Görsel yüksekliği */
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* görsel alanı kaplasın */
+    display: block;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+    .hero-overlay h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
+        font-size: 1.3rem;
+    }
+
+
+

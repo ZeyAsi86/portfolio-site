@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gülnur | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pap+K9K8+...== " crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <h1>Gülnur Bayraklı</h1>
+            <p class="subtitle">Biyomedikal Mühendisi | Sağlık Teknolojileri & Web</p>
+        </div>
+
+        <div class="header-right">
+            <a href="https://www.linkedin.com/in/gülnur-bayraklı" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+
+            <button onclick="setLanguage('tr')">TR</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+
+    </header>
+
+    <!-- HERO / GÖRSEL BÖLÜM -->
+    <section id="hero">
+        <img src="images/hero.jpg" alt="Biyomedikal Mühendislik Görseli" class="hero-image reveal">
+
+        <div class="hero-overlay reveal">
+            <h1>Merhaba, ben Gülnur Bayraklı</h1>
+            <p>Biyomedikal Mühendisi | Sağlık Teknolojileri & Web</p>
+        </div>
+    </section>
+
+
+
+
+    <section id="about" class="reveal">
+
+        <h2>✨ Hakkımda</h2>
+
+        <p>
+            Merhaba, ben Gülnur Bayraklı. Biyomedikal Mühendisliği mezunuyum ve sağlık teknolojileri alanında kendimi
+            sürekli geliştirmeye odaklanan bir mühendisim. Üniversite eğitimim boyunca biyomedikal cihazlar, sensör
+            tabanlı sistemler ve uzaktan hasta izleme teknolojileri
+            üzerine çalışmalar yaptım.
+        </p>
+
+        <p>
+            Staj ve iş deneyimlerimde medikal cihazların bakım, onarım ve kalibrasyon süreçlerinde aktif rol aldım; özellikle hasta monitörleri ve görüntüleme sistemlerinin çalışma prensipleri üzerine teknik deneyim kazandım. Aynı zamanda yazılım ve donanımı bir araya getiren projeler geliştirerek, sağlık alanında teknoloji odaklı çözümler üretmeyi hedefliyorum.Üniversite eğitimim ve stajlarım süresince medikal cihazlar,
+            sensör sistemleri ve yazılım entegrasyonu alanlarında
+            hem teorik hem de pratik deneyim kazandım.
+        </p>
+
+        <p>
+            Bu web sitesinde; geliştirdiğim projeleri, teknik çalışmalarımı ve kendimi geliştirmek için attığım adımları paylaşıyorum. Amacım, mühendislik bakış açımı gerçek problemlere uygulanabilir ve sürdürülebilir çözümlerle yansıtmak.
+        </p>
+    </section>
+
+
+    <section id="projects" class="reveal">
+        <h2>⭐ Projeler</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card reveal">
+                <h3>Uzaktan Hasta Takip Sistemi</h3>
+                <p>
+                    SpO2, nabız ve vücut sıcaklığı ölçümü yapan,
+                    verileri web arayüzünde gösteren IoT tabanlı sistem.
+                </p>
+                <div class="tech">
+                    Arduino • Firebase • HTML • CSS
+                </div>
+                <a href="projects/project1.html" class="btn">Detay</a>
+
+            </div>
+
+            <div class="project-card">
+                <h3>Akıllı Sağlık Web Platformu</h3>
+                <p>
+                    Hasta ve doktorların uzaktan sağlık verilerini
+                    görüntüleyebildiği web tabanlı platform.
+                </p>
+                <div class="tech">
+                    Web • JavaScript • IoT
+                </div>
+                <a href="projects/project2.html" class="btn">Detay</a>
+
+            </div>
+
+            <div class="project-card">
+                <h3>Akıllı Sağlık Cihazı & Web Entegrasyonu</h3>
+                <p>
+                    Vücut sıcaklığı, nabız ve ortam nemi ölçümü yapan
+                    sensör tabanlı sistemin web arayüzüyle entegrasyonu.
+                </p>
+                <div class="tech">
+                    Arduino • Sensörler • Firebase • Web
+                </div>
+                <a href="projects/project3.html" class="btn">Detay</a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>📩 İletişim</p>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 100;
+
+            reveals.forEach(reveal => {
+                const revealTop = reveal.getBoundingClientRect().top;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+
+</html>
