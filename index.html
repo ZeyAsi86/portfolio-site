@@ -16,6 +16,13 @@
             <p class="subtitle">Biyomedikal Mühendisi | Sağlık Teknolojileri & Web</p>
         </div>
 
+        <nav class="header-nav">
+            <a href="#about" class="nav-link">Hakkımda</a>
+            <a href="#projects" class="nav-link">Projeler</a>
+            <a href="#contact" class="nav-link">İletişim</a>
+        </nav>
+
+
         <div class="header-right">
             <a href="https://www.linkedin.com/in/gülnur-bayraklı" target="_blank">
                 <i class="fab fa-linkedin"></i> LinkedIn
@@ -35,7 +42,7 @@
         <img src="images/hero.jpg" alt="Biyomedikal Mühendislik Görseli" class="hero-image reveal">
 
         <div class="hero-overlay reveal">
-            <h1>Merhaba, ben Gülnur Bayraklı</h1>
+            <h1 class="hero-title">Merhaba, ben Gülnur Bayraklı</h1>
             <p>Biyomedikal Mühendisi | Sağlık Teknolojileri & Web</p>
         </div>
     </section>
@@ -114,10 +121,28 @@
     </section>
 
 
-    <footer>
+    <footer id="contact">
         <p>📩 İletişim</p>
-        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        
+
+        <section id="contact" class="contact">
+           
+            <p>Benimle iletişime geçmek veya çalışmalarımı incelemek için:</p>
+
+            <div class="contact-links">
+                <a href="mailto:gulnurbayrakli86@gmail.com" target="_blank">
+                    📧 Mail
+                </a>
+                <a href="https://www.linkedin.com/in/gülnur-bayraklı/" target="_blank"> 🔗LinkedIn</a>
+
+                <a href="https://github.com/ZeyAsi86" target="_blank">
+                    💻 GitHub
+                </a>
+            </div>
+        </section>
+
     </footer>
+
 
     <script>
         const reveals = document.querySelectorAll('.reveal');
@@ -138,6 +163,32 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
+
+    <script>
+        const sections = document.querySelectorAll("section, footer");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

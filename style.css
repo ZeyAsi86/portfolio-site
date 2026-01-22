@@ -1,4 +1,12 @@
-﻿/* =====================
+﻿html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 120px;
+}
+
+/* =====================
    GLOBAL
 ===================== */
 body {
@@ -287,5 +295,87 @@ footer {
         font-size: 1.3rem;
     }
 
+/* =====================
+   NAV ACTIVE STATE
+===================== */
+.header-nav {
+    display: flex;
+    gap: 25px;
+}
 
+.nav-link {
+    color: #555;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
 
+    .nav-link:hover {
+        color: #764ba2;
+    }
+
+    .nav-link.active {
+        color: #764ba2;
+    }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #764ba2;
+        }
+
+/* =====================
+   PREMIUM HEADER (OVERRIDE)
+===================== */
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+    .top-header.scrolled {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+/* =====================
+   PREMIUM HERO (OVERRIDE)
+===================== */
+.hero-overlay {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 700px;
+}
+
+    .hero-overlay h1 {
+        font-size: 3.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+    }
+
+/* =====================
+   HERO DARK OVERLAY
+===================== */
+#hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to right, rgba(0,0,0,0.55), rgba(0,0,0,0.25) );
+    z-index: 1;
+}
+.hero-title {
+    white-space: nowrap;
+}
