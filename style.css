@@ -38,11 +38,11 @@ a {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .subtitle {
-        font-size: 0.75rem;
-    }
+.subtitle {
+    font-size: 0.75rem; /* önce 0.95 idi, şimdi biraz daha küçük */
+    color: #666;
 }
+
 
 
 /* Sağ taraf: linkler ve butonlar */
