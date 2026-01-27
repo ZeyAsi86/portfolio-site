@@ -15,6 +15,7 @@ body {
     background: #f5f7fa;
     color: #333;
     animation: fadeIn 0.8s ease-in;
+    overflow-x: hidden;
 }
 
 a {
@@ -39,7 +40,7 @@ a {
 }
 
 .subtitle {
-    font-size: 0.75rem; /* önce 0.95 idi, şimdi biraz daha küçük */
+    font-size: 0.85rem; /* önce 0.95 idi, şimdi biraz daha küçük */
     color: #666;
 }
 
@@ -363,4 +364,82 @@ footer {
 }
 .hero-title {
     white-space: nowrap;
+}
+* {
+    box-sizing: border-box;
+}
+/* =====================
+   RESPONSIVE (MOBILE)
+===================== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .top-header {
+        flex-direction: column;
+        padding: 18px 20px;
+        text-align: center;
+    }
+
+    .header-left h1 {
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+
+    .header-right {
+        margin-top: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* HERO */
+    #hero {
+        height: 60vh;
+    }
+
+    .hero-overlay {
+        left: 50%;
+        text-align: center;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+        .hero-overlay h1 {
+            font-size: 2rem;
+            white-space: normal;
+        }
+
+        .hero-overlay p {
+            font-size: 1rem;
+        }
+
+    /* ABOUT */
+    #about {
+        margin: 40px 15px;
+        padding: 30px 20px;
+    }
+
+        #about p {
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+    /* PROJECTS */
+    #projects {
+        margin: 50px auto;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 25px 15px;
+        font-size: 0.9rem;
+    }
 }
