@@ -459,3 +459,22 @@ footer {
         padding: 0 12px;
     }
 }
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #333;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: justify; /* 🔥 iki yana yaslı */
+    text-justify: inter-word; /* kelime bazlı */
+    hyphens: auto; /* 🔥 EN KRİTİK */
+    word-spacing: -0.5px; /* boşlukları toparlar */
+}
+@media (max-width: 480px) {
+    .about-text {
+        font-size: 15.5px;
+        line-height: 1.9;
+    }
+}
