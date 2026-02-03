@@ -47,21 +47,16 @@
         </ul>
     </section>
 
-<figure class="project-image-box">
-  <img src="../images/proteus.jpeg" 
-       alt="Proteus ortamında oluşturulan devre şeması" 
-       class="project-image">
-
-  <figcaption class="image-caption">
-    Proteus Simülasyonunda Devre Şeması
-  </figcaption>
-</figure>
-
+    <figure class="project-image-box">
+    <img src="../images/blok diyagramı11.jpg" alt="Proje görseli" class="project-image">
+    
+    <figcaption class="image-caption">
+    Devrenin Blok Şeması
+    </figcaption>
+    </figure>
     
     <h2>Sistemin Çalışma Prensibi</h2>
-     <p>
-         Bu sistem, hayati sağlık verilerinin kesintisiz, uzaktan ve gerçek zamanlı olarak izlenebilmesini sağlayan bir IoMT (Medikal Nesnelerin İnterneti) çözümüdür. Temel yaklaşım, sensörlerle hasta verilerinin toplanması, bu verilerin mikrodenetleyici tarafında işlenmesi, bulut ortamına aktarılması ve kullanıcı arayüzü üzerinden izlenmesidir.
-         </p>
+     
 <h3 class="sub-title">1. Sensörler ve Veri Toplama</h3>
     <p>
      Sistemin ilk aşamasında, hastaya ait hayati parametrelerin elde edilmesi amacıyla SpO₂, nabız, ortam nemi ve vücut sıcaklığı gibi değerlerin ölçümünü gerçekleştiren sensörler kullanılmaktadır. 
@@ -70,37 +65,48 @@
     </p>
   <h3 class="sub-title">2. Mikrodenetleyici ile İşleme</h3>
     <p>
-    Sensörlerden gelen veriler mikrodenetleyici birimi tarafından alınarak işlenmektedir. Mikrodenetleyici, ölçüm verilerini belirli aralıklarla 
+    Sensörlerden gelen veriler ESP32 mikrodenetleyici birimi tarafından alınarak işlenmektedir. Mikrodenetleyici, ölçüm verilerini belirli aralıklarla 
     okuyarak gerekli düzenleme ve dönüştürme işlemlerini gerçekleştirir. İşlenen veriler, kablosuz iletişim modülü aracılığıyla internet ortamına aktarılmaya hazır hâle getirilir. 
-    Bu aşamada sistem, veri bütünlüğünü koruyarak doğru ve güvenilir ölçümlerin üst katmanlara iletilmesini sağlar.
-    </p>
+     </p>
   <h3 class="sub-title">3. Bulut Tabanlı Veri Aktarımı</h3>
-    </p>
-    Mikrodenetleyici tarafından işlenen sağlık verileri, kablosuz iletişim teknolojileri kullanılarak uzaktaki sunucuya aktarılmaktadır.
-    Wi-Fi tabanlı iletişim altyapısı sayesinde veriler internet üzerinden güvenli bir şekilde iletilmekte ve veri kaybı olmaksızın merkezi sisteme kaydedilmektedir. 
-    Bu yapı, hastaların fiziksel olarak sağlık kuruluşuna gitmesine gerek kalmadan uzaktan izlenebilmesine olanak tanımakta ve özellikle evde bakım süreçleri için önemli bir avantaj sağlamaktadır.
+    <p>
+    Mikrodenetleyici tarafından işlenen sağlık verileri, kablosuz iletişim teknolojileri kullanılarak Firebase bulut altyapısına aktarılmaktadır.
+    Wi-Fi tabanlı iletişim sayesinde veriler internet üzerinden gerçek zamanlı ve güvenli bir şekilde Firebase veritabanına iletilmekte ve merkezi sistemde saklanmaktadır.
+    Firebase’in sunduğu gerçek zamanlı veri senkronizasyonu özelliği sayesinde ölçülen sağlık parametreleri anlık olarak web arayüzünde görüntülenebilmekte ve 
+    veri kaybı riski en aza indirilmektedir. Bu yapı, hastaların fiziksel olarak sağlık kuruluşuna gitmesine gerek kalmadan uzaktan izlenebilmesine olanak tanımaktadır.
     </p>
   <h3 class="sub-title">4. Web Arayüzü ile Görüntüleme</h3>
-    </p>
+    <p>
     Sunucuya aktarılan veriler, web tabanlı bir kullanıcı arayüzü üzerinden görselleştirilmektedir. Bu arayüz sayesinde doktorlar, hastalar ve yetkili kullanıcılar; 
     SpO₂, nabız, vücut sıcaklığı ve ortam nemi gibi parametreleri anlık olarak takip edebilmektedir. 
     Kullanıcı dostu tasarlanan arayüz, verilerin grafikler ve sayısal değerler hâlinde sunulmasını sağlayarak sağlık durumunun hızlı ve etkili bir şekilde değerlendirilmesine imkân tanımaktadır.
     </p>
 
+       <section>
+       <h2>Sistem Yapısı</h2>
+       <p>
+           
+       </p>
+   </section>
 
-     </p>
-    <img src="../images/solid.jpeg" alt="Proje görseli" class="project-image">
-    <section>
-        <h2>Sistem Yapısı</h2>
-        <p>
-            Sensörlerden alınan veriler mikrodenetleyici
-            üzerinden Firebase’e gönderilmiş,
-            web arayüzünde gerçek zamanlı gösterilmiştir.
-        </p>
-    </section>
+   <figure class="project-image-box"> <img src="../images/solid.jpeg" alt="Proje görseli" class="project-image">
 
-    <h2>Devrenin Blok Şeması</h2>
-<img src="../images/blok diyagramı11.jpg" alt="Proje görseli" class="project-image">
+   <figcaption class="image-caption">
+    SolidWorks Kullanılarak Tasarlanan Prototip Dış Kasa Modeli   </figcaption>
+   </figure>
+
+
+ 
+
+    <figure class="project-image-box">
+  <img src="../images/proteus.jpeg" 
+       alt="Proteus ortamında oluşturulan devre şeması" 
+       class="project-image">
+
+  <figcaption class="image-caption">
+    Proteus Simülasyonunda Devre Şeması
+  </figcaption>
+</figure>
 
 </main>
 
