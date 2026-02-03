@@ -494,3 +494,15 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+.project-image-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
