@@ -20,20 +20,36 @@
     <section>
         <h2>Proje Özeti</h2>
         <p>
-            Bu proje, hastaların SpO₂, nabız ve vücut sıcaklığı gibi hayati verilerinin uzaktan ve gerçek zamanlı izlenmesini amaçlayan IoT tabanlı bir sistemdir. Sensörlerden alınan veriler kablosuz olarak web arayüzüne aktarılır ve kullanıcılar tarafından anlık olarak takip edilebilir. Sistem, özellikle evde bakım, kronik hasta takibi ve temasın azaltılması gereken durumlar için pratik bir çözüm sunar.
-        </p>
+            Bu çalışma, sağlık verilerinin uzaktan izlenmesine olanak tanıyan IoT tabanlı bir hasta takip sisteminin tasarımını ve uygulanmasını kapsamaktadır. 
+            Sistem; SpO₂, nabız, vücut sıcaklığı ve ortam nemi gibi parametreleri sensörler aracılığıyla ölçmekte ve elde edilen verileri kablosuz iletişim teknolojileri kullanarak
+            web tabanlı bir platforma aktarmaktadır. Kullanıcılar, bu verileri anlık olarak görüntüleyebilmekte ve hastaların sağlık durumlarını uzaktan takip edebilmektedir. 
+            Geliştirilen yapı, evde bakım süreçlerinde ve temasın sınırlandırılması gereken durumlarda dijital sağlık çözümlerine örnek teşkil etmektedir.
+              </p>
     </section>
-
+     <h2>Proje Amacı</h2>
+     <p>
+         Bu projenin temel amacı, sağlık hizmetlerinde sürekli takip gerektiren bireyler için güvenilir ve sürdürülebilir bir uzaktan izleme altyapısı oluşturmaktır. 
+         Proje kapsamında, sağlık personelinin hastaları fiziksel olarak yanında bulunmadan takip edebilmesi ve bireylerin kendi sağlık verilerine kolayca erişebilmesi hedeflenmektedir. 
+         Geliştirilen sistem ile sağlık hizmetlerinde daha planlı, önleyici ve veriye dayalı bir bakım yaklaşımının desteklenmesi amaçlanmaktadır. Bu sayede pandemi gibi kriz dönemlerinde 
+         fiziksel temasın azaltılması, evde bakım süreçlerinin daha güvenli hâle getirilmesi ve hastanelere yapılan başvuruların azaltılması hedeflenmektedir.
+         Ayrıca sistemin, uzaktan sağlık izleme çözümlerinin yaygınlaştırılmasına katkı sağlayacak uygulanabilir bir model sunması amaçlanmaktadır.
+     </p>
     <section>
         <h2>Kullanılan Teknolojiler</h2>
         <ul>
-            <li>Arduino</li>
-            <li>Pulse Oximeter Sensor</li>
+            <li>ESP32 Geliştirme Kartı</li>
+            <li>MAX30100 Nabız ve SpO₂ Sensörü</li>
+            <li>DS18B20 Dijital Vücut Isı Sensörü</li>
+            <li>DHT22 Ortam Nem ve Sıcaklık Sensörü</li>
+            <li>LCD</li>
             <li>Firebase</li>
-            <li>HTML, CSS</li>
+            <li>HTML</li>
         </ul>
     </section>
-
+    <h2>Devre Şeması (Proteus Simülasyonu)</h2>
+    <img src="../images/proteus.jpeg" alt="Proje görseli" class="project-image">
+    
+    <img src="../images/solid.jpeg" alt="Proje görseli" class="project-image">
     <section>
         <h2>Sistem Yapısı</h2>
         <p>
@@ -42,6 +58,9 @@
             web arayüzünde gerçek zamanlı gösterilmiştir.
         </p>
     </section>
+
+    <h2>Devrenin Blok Şeması</h2>
+<img src="../images/blok diyagramı11.jpg" alt="Proje görseli" class="project-image">
 
 </main>
 
